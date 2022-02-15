@@ -82,12 +82,12 @@ console.log(ageJones, ageJoe);
 //
 // console.log(now - 1997 > now - 2020);
 
-let x, y;
-x = y = 25 - 10 - 5;
-console.log(x, y);
-
-const averageAge = (ageJoe + ageJones) / 2;
-console.log(ageJones , ageJoe, averageAge)
+// let x, y;
+// x = y = 25 - 10 - 5;
+// console.log(x, y);
+//
+// const averageAge = (ageJoe + ageJones) / 2;
+// console.log(ageJones , ageJoe, averageAge)
 
 //Coding Exercise
 
@@ -105,12 +105,23 @@ console.log(ageJones , ageJoe, averageAge)
 // BMI = mass / height ** 2 = mass / (height * height) (mass in kg
 // and height in meter).
 
-const marksWeight = 78;
-const marksHeight = 1.69;
-const johnWeight = 92;
-const johnHeight = 1.95;
+// const marksWeight = 78;
+// const marksHeight = 1.69;
+// const johnWeight = 92;
+// const johnHeight = 1.95;
+
+const marksWeight = 95;
+const marksHeight = 1.88;
+const johnWeight = 85;
+const johnHeight = 1.76;
 
 const BMIMark = marksWeight / marksHeight ** 2;
 const BMIJohn = johnWeight / (johnHeight * johnHeight);
 
-console.log(BMIMark , BMIJohn)
+const markHigherBMI = BMIMark > BMIJohn;
+
+console.log(BMIMark , BMIJohn);
+console.log(markHigherBMI);
+
+
+
