@@ -57,27 +57,60 @@ const now = 2037;
 const ageJones = now - 1998;
 const ageJoe = now - 2020;
 console.log(ageJones, ageJoe);
-
-console.log(ageJones * 2, ageJoe / 10, 2 ** 3);
+//
+// console.log(ageJones * 2, ageJoe / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
 
-const firstName = 'Collin';
-const lastName = 'Jones';
-console.log(firstName, '', lastName);
+// const firstName = 'Collin';
+// const lastName = 'Jones';
+// console.log(firstName, '', lastName);
+//
+// let x = 10 + 5;
+// x += 10;
+// x *= 4;
+// x++;
+// x--;
+// x--;
+// console.log(x);
+//
+// //Comparison operators
+// console.log(ageJones > ageJoe); // > , < >=, <=
+//
+// console.log(ageJoe >= 18);
+//
+// const isFullAge = ageJoe >= 18;
+//
+// console.log(now - 1997 > now - 2020);
 
-let x = 10 + 5;
-x += 10;
-x *= 4;
-x++;
-x--;
-x--;
-console.log(x);
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x, y);
 
-//Comparison operators
-console.log(ageJones > ageJoe); // > , < >=, <=
+const averageAge = (ageJoe + ageJones) / 2;
+console.log(ageJones , ageJoe, averageAge)
 
-console.log(ageJoe >= 18);
+//Coding Exercise
 
-const isFullAge = ageJoe >= 18;
+// 1. Store Mark's and John's mass and height in variables
+// 2. Calculate both their BMIs using the formula (you can even implement both
+// versions)
+// 3. Create a Boolean variable 'markHigherBMI' containing information about
+// whether Mark has a higher BMI than John.
 
-console.log(now - 1997 > now - 2020);
+//  Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
+// m tall.
+//  Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
+// m tall.
+
+// BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+// and height in meter).
+
+const marksWeight = 78;
+const marksHeight = 1.69;
+const johnWeight = 92;
+const johnHeight = 1.95;
+
+const BMIMark = marksWeight / marksHeight ** 2;
+const BMIJohn = johnWeight / (johnHeight * johnHeight);
+
+console.log(BMIMark , BMIJohn)
