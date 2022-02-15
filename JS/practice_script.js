@@ -55,7 +55,7 @@
 // console.log(ageJones, ageJoe);
 const now = 2037;
 const ageJones = now - 1998;
-const ageJoe = now - 2018;
+const ageJoe = now - 2020;
 console.log(ageJones, ageJoe);
 
 console.log(ageJones * 2, ageJoe / 10, 2 ** 3);
@@ -71,4 +71,13 @@ x *= 4;
 x++;
 x--;
 x--;
-console.log(x)
+console.log(x);
+
+//Comparison operators
+console.log(ageJones > ageJoe); // > , < >=, <=
+
+console.log(ageJoe >= 18);
+
+const isFullAge = ageJoe >= 18;
+
+console.log(now - 1997 > now - 2020);
