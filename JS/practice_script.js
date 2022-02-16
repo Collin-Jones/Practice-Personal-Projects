@@ -102,20 +102,36 @@
 // console.log(jonesNew)
 
 
-const age = 25;
-// const isOldEnough = age >= 21;
+// const age = 25;
+// // const isOldEnough = age >= 21;
+//
+// if(age >= 21){
+//     console.log('Collin is of age to drink.')
+// }else{
+//     const yearsLeft = 21 - age
+//     console.log(`Collin is to young. Wait another ${yearsLeft} year.`)
+// }
+// let century;
+// const birthYear = 1997;
+// if (birthYear <= 2000){
+//      century = 20;
+// }else {
+//      century = 21;
+// }
+// console.log(century)
 
-if(age >= 21){
-    console.log('Collin is of age to drink.')
-}else{
-    const yearsLeft = 21 - age
-    console.log(`Collin is to young. Wait another ${yearsLeft} year.`)
-}
-let century;
-const birthYear = 1997;
-if (birthYear <= 2000){
-     century = 20;
-}else {
-     century = 21;
-}
-console.log(century)
+
+//type conversion
+const inputYear = '1997';
+console.log(Number(inputYear));
+console.log(Number('Collin'));
+console.log(String(23), 23);
+
+//type coercion
+console.log('I am ' + 25 + ' years old');
+console.log('23' - '10' - 3);
+
+
+let n = '1' + 1 //'11'
+n = n - 1;
+console.log(n)
