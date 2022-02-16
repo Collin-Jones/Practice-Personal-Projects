@@ -53,10 +53,10 @@
 // const ageJones = 2037 - 1998;
 // const ageJoe = 2037 - 2018;
 // console.log(ageJones, ageJoe);
-const now = 2037;
-const ageJones = now - 1998;
-const ageJoe = now - 2020;
-console.log(ageJones, ageJoe);
+// const now = 2037;
+// const ageJones = now - 1998;
+// const ageJoe = now - 2020;
+// console.log(ageJones, ageJoe);
 //
 // console.log(ageJones * 2, ageJoe / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
@@ -110,18 +110,28 @@ console.log(ageJones, ageJoe);
 // const johnWeight = 92;
 // const johnHeight = 1.95;
 
-const marksWeight = 95;
-const marksHeight = 1.88;
-const johnWeight = 85;
-const johnHeight = 1.76;
+// const marksWeight = 95;
+// const marksHeight = 1.88;
+// const johnWeight = 85;
+// const johnHeight = 1.76;
+//
+// const BMIMark = marksWeight / marksHeight ** 2;
+// const BMIJohn = johnWeight / (johnHeight * johnHeight);
+//
+// const markHigherBMI = BMIMark > BMIJohn;
+//
+// console.log(BMIMark , BMIJohn);
+// console.log(markHigherBMI);
 
-const BMIMark = marksWeight / marksHeight ** 2;
-const BMIJohn = johnWeight / (johnHeight * johnHeight);
+const firstName = 'Collin';
+const job = 'student';
+const birthYear = '1997';
+const year = 2022;
 
-const markHigherBMI = BMIMark > BMIJohn;
+// const jones = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+// console.log(jones)
 
-console.log(BMIMark , BMIJohn);
-console.log(markHigherBMI);
-
+const jonesNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonesNew)
 
 
