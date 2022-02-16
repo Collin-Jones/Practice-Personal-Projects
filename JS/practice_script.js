@@ -122,16 +122,32 @@
 
 
 //type conversion
-const inputYear = '1997';
-console.log(Number(inputYear));
-console.log(Number('Collin'));
-console.log(String(23), 23);
+// const inputYear = '1997';
+// console.log(Number(inputYear));
+// console.log(Number('Collin'));
+// console.log(String(23), 23);
 
 //type coercion
-console.log('I am ' + 25 + ' years old');
-console.log('23' - '10' - 3);
+// console.log('I am ' + 25 + ' years old');
+// console.log('23' - '10' - 3);
+//
+//
+// let n = '1' + 1 //'11'
+// n = n - 1;
+// console.log(n)
 
 
-let n = '1' + 1 //'11'
-n = n - 1;
-console.log(n)
+//5 false values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Collin'));
+console.log(Boolean({}));
+console.log(Boolean(''))
+
+const money = 0;
+if(money){
+    console.log("Don't spend it all");
+}else {
+    console.log("You should get a job!");
+}
