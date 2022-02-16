@@ -41,8 +41,8 @@
 
 // TODO : Use a template literal to include the BMI values in the outputs. Example: "Mark's
 //  BMI (28.3) is higher than John's (23.9)!"
-let markWeight = 95;
-let johnWeight = 87;
+let markWeight = 75;
+let johnWeight = 80;
 if (markWeight >= johnWeight ){
     console.log(`Mark weight is ${markWeight} and John weight is ${johnWeight}, then Mark weigh's more than John.`)
 }else {
