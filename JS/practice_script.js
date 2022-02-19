@@ -153,15 +153,19 @@
 // }
 
 //if statements with === operator
-const age = 18;
-if (age === 18) console.log('You just became an adult');
-
-if (age == 18) console.log('You just became an adult (loose)');
+// const age = 18;
+// if (age === 18) console.log('You just became an adult');
+//
+// if (age == 18) console.log('You just became an adult (loose)');
 
 const favorite = prompt('What is favorite number?')
 console.log(favorite)
 console.log(typeof favorite)
 
-if (favorite == 7);{
+if (favorite === 7) {
     console.log('Cool! 7 is an amazing number.')
+} else if (favorite === 10) {
+    console.log('Cool! 10 is a cool number')
+} else {
+    console.log('That is not 7 or 10')
 }
