@@ -139,15 +139,29 @@
 
 //5 false values: 0, '', undefined, null, NaN
 
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean('Collin'));
-console.log(Boolean({}));
-console.log(Boolean(''))
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean('Collin'));
+// console.log(Boolean({}));
+// console.log(Boolean(''))
+//
+// const money = 0;
+// if(money){
+//     console.log("Don't spend it all");
+// }else {
+//     console.log("You should get a job!");
+// }
 
-const money = 0;
-if(money){
-    console.log("Don't spend it all");
-}else {
-    console.log("You should get a job!");
+//if statements with === operator
+const age = 18;
+if (age === 18) console.log('You just became an adult');
+
+if (age == 18) console.log('You just became an adult (loose)');
+
+const favorite = prompt('What is favorite number?')
+console.log(favorite)
+console.log(typeof favorite)
+
+if (favorite == 7);{
+    console.log('Cool! 7 is an amazing number.')
 }
