@@ -172,16 +172,24 @@
 
 
 
-const hasDriversLicense = true; // A
-const hasGoodVision = false;
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasGoodVision || hasGoodVision);
+// const hasDriversLicense = true; // A
+// const hasGoodVision = false;
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasGoodVision || hasGoodVision);
+//
+// const isTired = false;
+// console.log(hasDriversLicense && hasGoodVision && isTired)
+//
+// if (hasDriversLicense && hasGoodVision){
+//     console.log('Collin is able to drive');
+// }else{
+//     console.log('Someone else should drive...')
+// }
 
-const isTired = false;
-console.log(hasDriversLicense && hasGoodVision && isTired)
-
-if (hasDriversLicense && hasGoodVision){
-    console.log('Collin is able to drive');
-}else{
-    console.log('Someone else should drive...')
+const day = 'monday';
+switch (day){
+    case 'monday' :
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
 }
