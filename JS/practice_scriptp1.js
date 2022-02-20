@@ -186,10 +186,11 @@
 //     console.log('Someone else should drive...')
 // }
 
-const day = 'monday';
-switch (day){
-    case 'monday' :
-        console.log('Plan course structure');
-        console.log('Go to coding meetup');
-        break;
-}
+// const day = 'monday';
+// switch (day){
+//     case 'monday' :
+//         console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+// }
+
