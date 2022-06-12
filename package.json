@@ -1,0 +1,9 @@
+{
+  "main": "Practice.html",
+  "scripts": {
+    "tailwind": "tailwindcss build -i CSS/input.css -o CSS/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.2"
+  }
+}
