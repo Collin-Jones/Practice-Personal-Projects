@@ -100,34 +100,72 @@
 // }
 // console.log(collin.calcAge(1991))
 
-// TODO Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
-//TODO
-// 1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
-// 2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
-// 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+//TODO Note for loop keep running while condition is True.
+// for (let rep = 1; rep <= 30; rep++){
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
 
-const mark = {
-   fullName: "Mark Miller",
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.bmi = this.mass/ this.height ** 2;
-        return this.bmi;
-    }
+//TODO NOTE Looping through an array.
 
-};
+const collin =[
+    'Collin',
+    'Jones',
+    2022 - 1997,
+    'student',
+    true
+]
+// const types = [];
+//
+// for (let i = 0; i < 5; i++) {
+//     console.log(collin[i], typeof collin[i]);
+//
+//     types.push(typeof collin[i]);
+// }
+// console.log(types)
+//
+// const years =[1991, 1997, 2006, 2022];
+// const ages = [];
+//
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i])
+// }
+// console.log(ages)
+//
+// TODO continue and break
+// for (let i = 0; i < 5; i++) {
+//     if(typeof collin[i] !== 'string') continue;
+//
+//     console.log(collin[i], typeof collin[i]);
+//
+// }
 
-const john = {
-    fullName: "John Smith",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.bmi = this.mass/this.height ** 2;
-        return this.bmi
-    }
+// for (let i = collin.length - 1; i >= 0; i--) {
+//     console.log(i, collin[i])
+// }
+// // loop inside a loop
+// for(let exercise = 1; exercise < 4; exercise++){
+//     console.log(`----Starting exercise ${exercise}`)
+//
+//     for (let rep = 1; rep < 6; rep++) {
+//         console.log(`Lifting weight repetition ${rep}`)
+//     }
+// }
+
+//TODO while loop
+
+// for (let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
+// let rep = 1
+// while(rep <= 10){
+//     console.log(`While: Lifting weights repetition ${rep}`);
+//     rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) +1;
+
+while(dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end ...');
 }
-john.calcBMI()
-mark.calcBMI()
-console.log(mark.bmi, john.bmi)
-
-// TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
