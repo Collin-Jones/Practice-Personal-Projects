@@ -574,3 +574,7 @@ video {
   font-size: 1.25rem !important;
   line-height: 1.75rem !important;
 }
+
+.text-\[50px\] {
+  font-size: 50px !important;
+}
