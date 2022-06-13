@@ -119,28 +119,49 @@
 // 2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
 // 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
 
-const mark = {
-    fullName: "Mark Miller",
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.bmi = this.mass/ this.height ** 2;
-        return this.bmi;
-    }
-
-};
-
-const john = {
-    fullName: "John Smith",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.bmi = this.mass/this.height ** 2;
-        return this.bmi
-    }
-}
-john.calcBMI()
-mark.calcBMI()
-console.log(mark.bmi, john.bmi)
+// const mark = {
+//     fullName: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.bmi = this.mass/ this.height ** 2;
+//         return this.bmi;
+//     }
+//
+// };
+//
+// const john = {
+//     fullName: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.bmi = this.mass/this.height ** 2;
+//         return this.bmi
+//     }
+// }
+// john.calcBMI()
+// mark.calcBMI()
+// console.log(mark.bmi, john.bmi)
 
 // TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+
+// Coding Challenge #4
+
+// TODO Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+//TODO
+// 1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+// 2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+// TEST DATA: Test for bill values 275, 40 and 430
+// HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+// HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+// GOOD LUCK 😀
+
+const bill = 430
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
+
+const bill1 = 40
+const tip1 = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
+console.log(`The bill was ${bill1}, the tip was ${tip1}, and the total value ${bill1 + tip1}`)
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
