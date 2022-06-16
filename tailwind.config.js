@@ -1,6 +1,6 @@
 module.exports = {
   important: true,
-  content: ["./main/HTML/Practice.html",
+  content: ["./main/HTML/practice.html",
   ],
   theme: {
     extend: {},
