@@ -1,7 +1,7 @@
 {
   "main": "Practice.html",
   "scripts": {
-    "tailwind": "tailwindcss build -i CSS/input.css -o CSS/output.css --watch"
+    "tailwind": "tailwindcss build -i main-course/CSS/input.css -o CSS/output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.24"

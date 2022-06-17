@@ -165,3 +165,42 @@ const tip1 = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
 console.log(`The bill was ${bill1}, the tip was ${tip1}, and the total value ${bill1 + tip1}`)
 
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
+
+// Coding Challenge
+
+
+// TODO Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
+// Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+// Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+
+// Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+
+// TEST DATA 1: [17, 21, 23]
+// TEST DATA 2: [12, 5, -5, 0, 4]
+
+// 1. Understanding the problem
+ //  1) Understanding the problem
+ //  - Array transformed to string, separated by ...
+ // - What is the X days? Answer: index + 1
+
+// 2) Breaking up into sub-problems
+ // - Transform array into string
+ // - Transform each element to string with ºC
+ // - Strings needs to contain day (index + 1)
+ // - Add ... between elements and start and end of string
+ // - Log string to console
+
+const data1 = [17, 21, 23]
+const data2 = [12, 5, -5, 0, 4]
+
+console.log(`... ${data1[0]} ... ${data1[1]} ... ${data1[2]}`)
+
+const printForecast = function (array){
+    let string = ' ';
+    for (let i = 0; i < array.length; i++) {
+        string += `${array[i]}ºC in ${i + 1} days ... `;
+    }
+    console.log('...' + string)
+}
+printForecast(data1)
