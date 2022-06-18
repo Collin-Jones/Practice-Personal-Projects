@@ -105,6 +105,10 @@ h1 {
     cursor: pointer;
 }
 
+.btn:active {
+    transform: translateY(4px);
+}
+
 .btn:hover {
     background-color: #ccc;
 }
