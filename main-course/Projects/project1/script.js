@@ -53,8 +53,8 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-    score = 20;
-    myNumber = Math.trunc(Math.random() * 20) + 1;
+    score = 10;
+    myNumber = Math.trunc(Math.random() * 10) + 1;
 
     displayMessage('Start Guessing...')
     document.querySelector('.score').textContent = score;
