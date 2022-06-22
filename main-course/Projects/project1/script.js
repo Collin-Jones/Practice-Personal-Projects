@@ -7,6 +7,7 @@
 // document.querySelector('.score').textContent = 5;
 //
 // document.querySelector('.guess').value = 23;
+const $ = document.querySelector.bind(document);
 
 
 let myNumber = Math.trunc(Math.random() * 10) + 1;
@@ -16,13 +17,12 @@ let tooHigh = 'Too High';
 let tooLow = 'Too Low';
 
 const displayMessage = function (message) {
-    document.querySelector('.message').textContent = message;
+    $('.message').textContent = message;
 };
 
 
-document.querySelector('.check').addEventListener('click', function () {
-    const guess = Number(document.querySelector('.guess').value);
-    console.log(guess, typeof guess)
+$('.check').addEventListener('click', function () {
+    const guess = Number($('.guess').value);
 
 //When there is no input
     if (!guess) {
@@ -30,24 +30,24 @@ document.querySelector('.check').addEventListener('click', function () {
 
     } else if (guess === myNumber) {
         displayMessage('Correct Number!');
-        document.querySelector('.number').textContent = myNumber;
+        $('.number').textContent = myNumber;
 
-        document.querySelector('body').style.background = '#60b347'
-        document.querySelector('.number').style.width = '30rem'
+        $('body').style.background = '#60b347'
+        $('.number').style.width = '30rem'
 
         if (score > highScore) {
             highScore = score;
-            document.querySelector('.highscore').textContent = highScore;
+            $('.highscore').textContent = highScore;
         }
     } else if (guess !== myNumber) {
         if (score > 0) {
             displayMessage(guess > myNumber ? tooHigh : tooLow );
             score--;
-            document.querySelector('.score').textContent = score;
+            $('.score').textContent = score;
         } else {
             displayMessage('You Lost The Game!!!')
-            document.querySelector('body').style.background = '#ff0000'
-            document.querySelector('.score').textContent = 0;
+            $('body').style.background = '#ff0000'
+            $('.score').textContent = 0;
         }
     }
 });
@@ -62,15 +62,15 @@ Implement a game rest functionality, so that the player can make a new guess! He
 4. Also restore the original background color (#222) and number width (15rem)
 GOOD LUCK 😀
 */
-document.querySelector('.again').addEventListener('click', function () {
+$('.again').addEventListener('click', function () {
     score = 10;
     myNumber = Math.trunc(Math.random() * 10) + 1;
 
     displayMessage('Start Guessing...')
-    document.querySelector('.score').textContent = score;
-    document.querySelector('.number').textContent = '?';
-    document.querySelector('.guess').value = ' ';
-    document.querySelector('body').style.backgroundColor = '#222'
-    document.querySelector('.number').style.width = '15rem';
+    $('.score').textContent = score;
+    $('.number').textContent = '?';
+    $('.guess').value = ' ';
+    $('body').style.backgroundColor = '#222'
+    $('.number').style.width = '15rem';
 
 })
