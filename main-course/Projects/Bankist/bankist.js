@@ -34,7 +34,7 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 // Elements
-const $ = document.querySelector.bind(document);
+// const $ = document.querySelector.bind(document);
 
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
@@ -62,13 +62,15 @@ const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
 const displayMovements = function (movements) {
+    containerMovements.innerHTML = '';
+
     movements.forEach(function (mov, i) {
 
         const type = mov > 0 ? 'deposit' : 'withdrawal';
 
         const html = `
          <div class="movements__row">
-      <div class="movements__type movements__type--deposit">${i + 1}</div>
+      <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
       <div class="movements__value">${mov}</div>
     </div>
         `
@@ -80,6 +82,22 @@ displayMovements(account1.movements)
 
 
 // LECTURES
+
+
+// The Magic of Chaining Methods
+const eurToUsd = 1.1;
+console.log(movements);
+
+// PIPELINE
+const totalDepositsUSD = movements
+    .filter(mov => mov > 0)
+    .map((mov, i, arr) => {
+        // console.log(arr);
+        return mov * eurToUsd;
+    })
+    // .map(mov => mov * eurToUsd)
+    .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositsUSD);
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //
