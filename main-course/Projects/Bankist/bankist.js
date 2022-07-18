@@ -34,32 +34,53 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 // Elements
-// const $ = document.querySelector.bind(document);
+const $ = document.querySelector.bind(document);
 
-const labelWelcome = document.querySelector('.welcome');
-const labelDate = document.querySelector('.date');
-const labelBalance = document.querySelector('.balance__value');
-const labelSumIn = document.querySelector('.summary__value--in');
-const labelSumOut = document.querySelector('.summary__value--out');
-const labelSumInterest = document.querySelector('.summary__value--interest');
-const labelTimer = document.querySelector('.timer');
+const labelWelcome = $('.welcome');
 
-const containerApp = document.querySelector('.app');
-const containerMovements = document.querySelector('.movements');
+const labelDate = $('.date');
 
-const btnLogin = document.querySelector('.login__btn');
-const btnTransfer = document.querySelector('.form__btn--transfer');
-const btnLoan = document.querySelector('.form__btn--loan');
-const btnClose = document.querySelector('.form__btn--close');
-const btnSort = document.querySelector('.btn--sort');
+const labelBalance = $('.balance__value');
 
-const inputLoginUsername = document.querySelector('.login__input--user');
-const inputLoginPin = document.querySelector('.login__input--pin');
-const inputTransferTo = document.querySelector('.form__input--to');
-const inputTransferAmount = document.querySelector('.form__input--amount');
-const inputLoanAmount = document.querySelector('.form__input--loan-amount');
-const inputCloseUsername = document.querySelector('.form__input--user');
-const inputClosePin = document.querySelector('.form__input--pin');
+const labelSumIn = $('.summary__value--in');
+
+const labelSumOut = $('.summary__value--out');
+
+const labelSumInterest = $('.summary__value--interest');
+
+const labelTimer = $('.timer');
+
+
+const containerApp = $('.app');
+
+const containerMovements = $('.movements');
+
+
+const btnLogin = $('.login__btn');
+
+const btnTransfer = $('.form__btn--transfer');
+
+const btnLoan = $('.form__btn--loan');
+
+const btnClose = $('.form__btn--close');
+
+const btnSort = $('.btn--sort');
+
+
+const inputLoginUsername = $('.login__input--user');
+
+const inputLoginPin = $('.login__input--pin');
+
+const inputTransferTo = $('.form__input--to');
+
+const inputTransferAmount = $('.form__input--amount');
+
+const inputLoanAmount = $('.form__input--loan-amount');
+
+const inputCloseUsername = $('.form__input--user');
+
+const inputClosePin = $('.form__input--pin');
+
 
 const displayMovements = function (movements) {
     containerMovements.innerHTML = '';
@@ -80,24 +101,32 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements)
 
+const createUsernames = function (accs) {
+    accs.forEach(function (acc){
+       acc.username = user.toLowerCase().split(' ').map(name => name[0]).join();
+    })
+
+    const username = user.owner.toLowerCase().split(' ').map(name => name[0]).join();
+};
+createUsernames(accounts);
 
 // LECTURES
 
 
-// The Magic of Chaining Methods
-const eurToUsd = 1.1;
-console.log(movements);
-
-// PIPELINE
-const totalDepositsUSD = movements
-    .filter(mov => mov > 0)
-    .map((mov, i, arr) => {
-        // console.log(arr);
-        return mov * eurToUsd;
-    })
-    // .map(mov => mov * eurToUsd)
-    .reduce((acc, mov) => acc + mov, 0);
-console.log(totalDepositsUSD);
+// // The Magic of Chaining Methods
+// const eurToUsd = 1.1;
+// console.log(movements);
+//
+// // PIPELINE
+// const totalDepositsUSD = movements
+//     .filter(mov => mov > 0)
+//     .map((mov, i, arr) => {
+//         // console.log(arr);
+//         return mov * eurToUsd;
+//     })
+//     // .map(mov => mov * eurToUsd)
+//     .reduce((acc, mov) => acc + mov, 0);
+// console.log(totalDepositsUSD);
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //
