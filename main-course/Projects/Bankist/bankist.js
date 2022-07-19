@@ -101,6 +101,12 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements)
 
+const calcDisplayBalance = function (movements){
+    const balance = movements.reduce((acc, mov) => acc + mov, 0);
+    labelBalance.textContent = `${balance} USD`
+}
+calcDisplayBalance(account1.movements)
+
 const createUsernames = function (accs) {
     accs.forEach(function (acc){
        acc.username = user.toLowerCase().split(' ').map(name => name[0]).join();
@@ -109,7 +115,16 @@ const createUsernames = function (accs) {
 createUsernames(accounts);
 
 
+///////////////
 // LECTURES
+
+
+// Maximum value
+// const max = movements.reduce((acc, mov) => {
+//     if (acc > mov) return acc;
+//     else return mov;
+// }, movements[0]);
+// console.log(max);
 
 // The reduce Method
 // console.log(movements);
