@@ -157,14 +157,14 @@
 // HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 // GOOD LUCK 😀
 
-const bill = 430
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
-
-const bill1 = 40
-const tip1 = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
-console.log(`The bill was ${bill1}, the tip was ${tip1}, and the total value ${bill1 + tip1}`)
-
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
+// const bill = 430
+// const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
+//
+// const bill1 = 40
+// const tip1 = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
+// console.log(`The bill was ${bill1}, the tip was ${tip1}, and the total value ${bill1 + tip1}`)
+//
+// console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
 
 // Coding Challenge
 
@@ -191,16 +191,31 @@ console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bil
  // - Add ... between elements and start and end of string
  // - Log string to console
 
-const data1 = [17, 21, 23]
-const data2 = [12, 5, -5, 0, 4]
+// const data1 = [17, 21, 23]
+// const data2 = [12, 5, -5, 0, 4]
+//
+// console.log(`... ${data1[0]} ... ${data1[1]} ... ${data1[2]}`)
+//
+// const printForecast = function (array){
+//     let string = ' ';
+//     for (let i = 0; i < array.length; i++) {
+//         string += `${array[i]}ºC in ${i + 1} days ... `;
+//     }
+//     console.log('...' + string)
+// }
+// printForecast(data1)
 
-console.log(`... ${data1[0]} ... ${data1[1]} ... ${data1[2]}`)
+let cardSum = 0;
+function carePackets(cardTypes){
+    for (let i = 0; i < cardTypes; i++) {
+        if(cardTypes[i] % 2 !== 0){
 
-const printForecast = function (array){
-    let string = ' ';
-    for (let i = 0; i < array.length; i++) {
-        string += `${array[i]}ºC in ${i + 1} days ... `;
+        }
+        cardSum++;
     }
-    console.log('...' + string)
+    if(cardSum < 2 || cardSum === 3){
+        cardSum = 0;
+    }
+    return cardSum;
 }
-printForecast(data1)
+carePackets([3, 8, 7, 6, 4]);
